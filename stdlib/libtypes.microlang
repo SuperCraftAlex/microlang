@@ -1,0 +1,54 @@
+# Signed integers
+t i8:
+    .public
+    size 1
+    group i
+
+t i16:
+    .public
+    size 2
+    group i
+
+t i32:
+    .public
+    size 4
+    group i
+
+t i64:
+    .public
+    size 8
+    group i
+
+
+# Unsigned integers
+t u8:
+    .public
+    size 1
+    group u
+
+t u16:
+    .public
+    size 2
+    group u
+
+t u32:
+    .public
+    size 4
+    group u
+
+t u64:
+    .public
+    size 8
+    group u
+
+
+# Floats
+t f32:
+    .public
+    size 4
+    group f
+
+t f64:
+    .public
+    size 8
+    group f

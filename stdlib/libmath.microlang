@@ -1,0 +1,12 @@
+ct:
+    include("libtypes")
+
+f add(u8 a, u8 b :RAM) > u8:
+    .if(ARCH_6502)
+    .public
+
+    _startop("math", "reg_a")
+    _to_reg(a, "A")                         # somehow gets value a into register "A" if it isnt already there
+    _asm("ADC ", &b)                        # inserts the address of b after "lda"
+    _ret_and_endop(%A, "math", "reg_a")     # returns the a register somehow and ends the operations
+

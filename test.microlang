@@ -1,0 +1,11 @@
+use("libtypes")
+use("libio")
+
+u8 myvar
+
+f entry():
+    myvar = getch()
+    if(myvar=='A'):
+        putch('B')
+    else:
+        putch(myvar)
