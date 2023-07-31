@@ -63,6 +63,8 @@ struct VAR {
 
 	fixed_to_ram bool
 	fixed_to_stack bool
+
+	ref_id int		// link to other object
 }
 
 pub fn (s VAR) str() string {
@@ -79,6 +81,10 @@ pub fn (s VAR) str() string {
 
 	if s.pointerc > 0 {
 		o << "\"pointer_count\": ${s.pointerc}"
+	}
+
+	if s.ref_id > 0 {
+		o << "\"ref_id\": ${s.ref_id}"
 	}
 
 	if s.fixed_to_ram {
